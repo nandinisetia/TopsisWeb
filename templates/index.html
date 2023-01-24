@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Topsis Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+
+		
+		<link rel="stylesheet" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form class="form-signin" method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					<h3>Topsis Calculator</h3>
+					<p>Upload your csv file to find topsis rank</p>
+					<label class="form-group">
+						<input type="email"  name="email" id="inputEmail" class="form-control"  required>
+						<span>Your Email</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text"  name="Impacts" id="Impacts" class="form-control"  required>
+						<span for="">Impacts</span>
+						<span class="border"></span>
+					</label>
+				</label>
+					<label class="form-group">
+						<input type="text"  name="Weights" id="Weights" class="form-control"  required>
+						<span for="">Weights</span>
+						<span class="border"></span>
+					</label>
+
+					<label class="form-group" >
+						<input type="file"  accept=".csv" id="id_docfile" name="id_docfile" class="form-control"  required>
+						<span for=""></span>
+						<span class="border"></span>
+					</label>
+					<button>Submit
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>
